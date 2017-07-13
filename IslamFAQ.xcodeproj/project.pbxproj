@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCCD22CF1F1750B800E80F84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD22CE1F1750B800E80F84 /* AppDelegate.swift */; };
+		CCCD22D11F1750B800E80F84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD22D01F1750B800E80F84 /* ViewController.swift */; };
+		CCCD22D41F1750B800E80F84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCD22D21F1750B800E80F84 /* Main.storyboard */; };
+		CCCD22D71F1750B800E80F84 /* IslamFAQ.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CCCD22D51F1750B800E80F84 /* IslamFAQ.xcdatamodeld */; };
+		CCCD22D91F1750B800E80F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCCD22D81F1750B800E80F84 /* Assets.xcassets */; };
+		CCCD22DC1F1750B800E80F84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCCD22DA1F1750B800E80F84 /* LaunchScreen.storyboard */; };
+		CCCD22E71F1750B800E80F84 /* IslamFAQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD22E61F1750B800E80F84 /* IslamFAQTests.swift */; };
+		CCCD22F21F1750B800E80F84 /* IslamFAQUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD22F11F1750B800E80F84 /* IslamFAQUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCCD22E31F1750B800E80F84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCCD22C31F1750B800E80F84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCCD22CA1F1750B800E80F84;
+			remoteInfo = IslamFAQ;
+		};
+		CCCD22EE1F1750B800E80F84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCCD22C31F1750B800E80F84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCCD22CA1F1750B800E80F84;
+			remoteInfo = IslamFAQ;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CCCD22CB1F1750B800E80F84 /* IslamFAQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IslamFAQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCCD22CE1F1750B800E80F84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CCCD22D01F1750B800E80F84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CCCD22D31F1750B800E80F84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCCD22D61F1750B800E80F84 /* IslamFAQ.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IslamFAQ.xcdatamodel; sourceTree = "<group>"; };
+		CCCD22D81F1750B800E80F84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCCD22DB1F1750B800E80F84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CCCD22DD1F1750B800E80F84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCCD22E21F1750B800E80F84 /* IslamFAQTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IslamFAQTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCCD22E61F1750B800E80F84 /* IslamFAQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslamFAQTests.swift; sourceTree = "<group>"; };
+		CCCD22E81F1750B800E80F84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCCD22ED1F1750B800E80F84 /* IslamFAQUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IslamFAQUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCCD22F11F1750B800E80F84 /* IslamFAQUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IslamFAQUITests.swift; sourceTree = "<group>"; };
+		CCCD22F31F1750B800E80F84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCCD22C81F1750B800E80F84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCCD22DF1F1750B800E80F84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCCD22EA1F1750B800E80F84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCCD22C21F1750B800E80F84 = {
+			isa = PBXGroup;
+			children = (
+				CCCD22CD1F1750B800E80F84 /* IslamFAQ */,
+				CCCD22E51F1750B800E80F84 /* IslamFAQTests */,
+				CCCD22F01F1750B800E80F84 /* IslamFAQUITests */,
+				CCCD22CC1F1750B800E80F84 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCCD22CC1F1750B800E80F84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCCD22CB1F1750B800E80F84 /* IslamFAQ.app */,
+				CCCD22E21F1750B800E80F84 /* IslamFAQTests.xctest */,
+				CCCD22ED1F1750B800E80F84 /* IslamFAQUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCCD22CD1F1750B800E80F84 /* IslamFAQ */ = {
+			isa = PBXGroup;
+			children = (
+				CCCD22CE1F1750B800E80F84 /* AppDelegate.swift */,
+				CCCD22D01F1750B800E80F84 /* ViewController.swift */,
+				CCCD22D21F1750B800E80F84 /* Main.storyboard */,
+				CCCD22D81F1750B800E80F84 /* Assets.xcassets */,
+				CCCD22DA1F1750B800E80F84 /* LaunchScreen.storyboard */,
+				CCCD22DD1F1750B800E80F84 /* Info.plist */,
+				CCCD22D51F1750B800E80F84 /* IslamFAQ.xcdatamodeld */,
+			);
+			path = IslamFAQ;
+			sourceTree = "<group>";
+		};
+		CCCD22E51F1750B800E80F84 /* IslamFAQTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCCD22E61F1750B800E80F84 /* IslamFAQTests.swift */,
+				CCCD22E81F1750B800E80F84 /* Info.plist */,
+			);
+			path = IslamFAQTests;
+			sourceTree = "<group>";
+		};
+		CCCD22F01F1750B800E80F84 /* IslamFAQUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CCCD22F11F1750B800E80F84 /* IslamFAQUITests.swift */,
+				CCCD22F31F1750B800E80F84 /* Info.plist */,
+			);
+			path = IslamFAQUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCCD22CA1F1750B800E80F84 /* IslamFAQ */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCCD22F61F1750B800E80F84 /* Build configuration list for PBXNativeTarget "IslamFAQ" */;
+			buildPhases = (
+				CCCD22C71F1750B800E80F84 /* Sources */,
+				CCCD22C81F1750B800E80F84 /* Frameworks */,
+				CCCD22C91F1750B800E80F84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IslamFAQ;
+			productName = IslamFAQ;
+			productReference = CCCD22CB1F1750B800E80F84 /* IslamFAQ.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCCD22E11F1750B800E80F84 /* IslamFAQTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCCD22F91F1750B800E80F84 /* Build configuration list for PBXNativeTarget "IslamFAQTests" */;
+			buildPhases = (
+				CCCD22DE1F1750B800E80F84 /* Sources */,
+				CCCD22DF1F1750B800E80F84 /* Frameworks */,
+				CCCD22E01F1750B800E80F84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCCD22E41F1750B800E80F84 /* PBXTargetDependency */,
+			);
+			name = IslamFAQTests;
+			productName = IslamFAQTests;
+			productReference = CCCD22E21F1750B800E80F84 /* IslamFAQTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CCCD22EC1F1750B800E80F84 /* IslamFAQUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCCD22FC1F1750B800E80F84 /* Build configuration list for PBXNativeTarget "IslamFAQUITests" */;
+			buildPhases = (
+				CCCD22E91F1750B800E80F84 /* Sources */,
+				CCCD22EA1F1750B800E80F84 /* Frameworks */,
+				CCCD22EB1F1750B800E80F84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCCD22EF1F1750B800E80F84 /* PBXTargetDependency */,
+			);
+			name = IslamFAQUITests;
+			productName = IslamFAQUITests;
+			productReference = CCCD22ED1F1750B800E80F84 /* IslamFAQUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCCD22C31F1750B800E80F84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Adilkhan Khassanov";
+				TargetAttributes = {
+					CCCD22CA1F1750B800E80F84 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4M62H5V5V4;
+						ProvisioningStyle = Automatic;
+					};
+					CCCD22E11F1750B800E80F84 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4M62H5V5V4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CCCD22CA1F1750B800E80F84;
+					};
+					CCCD22EC1F1750B800E80F84 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4M62H5V5V4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CCCD22CA1F1750B800E80F84;
+					};
+				};
+			};
+			buildConfigurationList = CCCD22C61F1750B800E80F84 /* Build configuration list for PBXProject "IslamFAQ" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCCD22C21F1750B800E80F84;
+			productRefGroup = CCCD22CC1F1750B800E80F84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCCD22CA1F1750B800E80F84 /* IslamFAQ */,
+				CCCD22E11F1750B800E80F84 /* IslamFAQTests */,
+				CCCD22EC1F1750B800E80F84 /* IslamFAQUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCCD22C91F1750B800E80F84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCCD22DC1F1750B800E80F84 /* LaunchScreen.storyboard in Resources */,
+				CCCD22D91F1750B800E80F84 /* Assets.xcassets in Resources */,
+				CCCD22D41F1750B800E80F84 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCCD22E01F1750B800E80F84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCCD22EB1F1750B800E80F84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCCD22C71F1750B800E80F84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCCD22D71F1750B800E80F84 /* IslamFAQ.xcdatamodeld in Sources */,
+				CCCD22D11F1750B800E80F84 /* ViewController.swift in Sources */,
+				CCCD22CF1F1750B800E80F84 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCCD22DE1F1750B800E80F84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCCD22E71F1750B800E80F84 /* IslamFAQTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCCD22E91F1750B800E80F84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCCD22F21F1750B800E80F84 /* IslamFAQUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCCD22E41F1750B800E80F84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCCD22CA1F1750B800E80F84 /* IslamFAQ */;
+			targetProxy = CCCD22E31F1750B800E80F84 /* PBXContainerItemProxy */;
+		};
+		CCCD22EF1F1750B800E80F84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCCD22CA1F1750B800E80F84 /* IslamFAQ */;
+			targetProxy = CCCD22EE1F1750B800E80F84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CCCD22D21F1750B800E80F84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCCD22D31F1750B800E80F84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CCCD22DA1F1750B800E80F84 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCCD22DB1F1750B800E80F84 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCCD22F41F1750B800E80F84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCCD22F51F1750B800E80F84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCCD22F71F1750B800E80F84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4M62H5V5V4;
+				INFOPLIST_FILE = IslamFAQ/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nFactorial.IslamFAQ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		CCCD22F81F1750B800E80F84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4M62H5V5V4;
+				INFOPLIST_FILE = IslamFAQ/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nFactorial.IslamFAQ;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		CCCD22FA1F1750B800E80F84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4M62H5V5V4;
+				INFOPLIST_FILE = IslamFAQTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nFactorial.IslamFAQTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IslamFAQ.app/IslamFAQ";
+			};
+			name = Debug;
+		};
+		CCCD22FB1F1750B800E80F84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4M62H5V5V4;
+				INFOPLIST_FILE = IslamFAQTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nFactorial.IslamFAQTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IslamFAQ.app/IslamFAQ";
+			};
+			name = Release;
+		};
+		CCCD22FD1F1750B800E80F84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4M62H5V5V4;
+				INFOPLIST_FILE = IslamFAQUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nFactorial.IslamFAQUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = IslamFAQ;
+			};
+			name = Debug;
+		};
+		CCCD22FE1F1750B800E80F84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 4M62H5V5V4;
+				INFOPLIST_FILE = IslamFAQUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nFactorial.IslamFAQUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = IslamFAQ;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCCD22C61F1750B800E80F84 /* Build configuration list for PBXProject "IslamFAQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCCD22F41F1750B800E80F84 /* Debug */,
+				CCCD22F51F1750B800E80F84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCCD22F61F1750B800E80F84 /* Build configuration list for PBXNativeTarget "IslamFAQ" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCCD22F71F1750B800E80F84 /* Debug */,
+				CCCD22F81F1750B800E80F84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CCCD22F91F1750B800E80F84 /* Build configuration list for PBXNativeTarget "IslamFAQTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCCD22FA1F1750B800E80F84 /* Debug */,
+				CCCD22FB1F1750B800E80F84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CCCD22FC1F1750B800E80F84 /* Build configuration list for PBXNativeTarget "IslamFAQUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCCD22FD1F1750B800E80F84 /* Debug */,
+				CCCD22FE1F1750B800E80F84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CCCD22D51F1750B800E80F84 /* IslamFAQ.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CCCD22D61F1750B800E80F84 /* IslamFAQ.xcdatamodel */,
+			);
+			currentVersion = CCCD22D61F1750B800E80F84 /* IslamFAQ.xcdatamodel */;
+			path = IslamFAQ.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CCCD22C31F1750B800E80F84 /* Project object */;
+}
