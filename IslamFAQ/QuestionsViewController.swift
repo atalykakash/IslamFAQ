@@ -8,14 +8,13 @@
 
 import UIKit
 import EasyPeasy
+import NVActivityIndicatorView
 
-class QuestionsViewController: UIViewController {
+class QuestionsViewController: UIViewController, NVActivityIndicatorViewable {
 
-    let questions = [
-        Question(question: "Kimsin sen?", answer: "Kimmin men?"), Question(question: "Kimsin sen?", answer: "Kimmin men?"),
-        Question(question: "Kimsin sen?", answer: "Kimmin men?"), Question(question: "Kimsin sen?", answer: "Kimmin men?"),
-        Question(question: "Kimsin sen?", answer: "Kimmin men?"), Question(question: "Kimsin sen?", answer: "Kimmin men?")
-    ]
+    var questions: [Question] = []
+    var topic = ""
+    var subtopic = ""
     
     lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -32,6 +31,14 @@ class QuestionsViewController: UIViewController {
         return collectionView
     }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViews()
+        setupLayouts()
+        startAnimating(type: .ballPulseSync)
+        parseQuestions()
+    }
+    
     private func setupViews(){
         self.view.addSubview(collectionView)
         collectionView.dataSource = self
@@ -45,10 +52,12 @@ class QuestionsViewController: UIViewController {
         ]
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupViews()
-        setupLayouts()
+    private func parseQuestions() {
+        Book.parseQuestions(topic: topic, subtopic: subtopic) { (questions) in
+            self.questions = questions
+            self.collectionView.reloadData()
+            self.stopAnimating()
+        }
     }
     
 }
@@ -64,7 +73,6 @@ extension QuestionsViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "questionID", for: indexPath) as! QuestionCollectionViewCell
         
         cell.questionLabel.text = questions[indexPath.row].questionTitle
-        cell.answerLabel.text = questions[indexPath.row].answerTitle
         
         return cell
     }

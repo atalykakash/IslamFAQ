@@ -8,13 +8,11 @@
 
 import UIKit
 import EasyPeasy
+import NVActivityIndicatorView
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, NVActivityIndicatorViewable {
     
-    let books = [
-                Book(title: "Book"), Book(title: "Book"), Book(title: "Book"), Book(title: "Book"),
-                Book(title: "Book"), Book(title: "Book"), Book(title: "Book"), Book(title: "Book")
-    ]
+    var books: [Book] = []
     
     lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -27,16 +25,15 @@ class ViewController: UIViewController {
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
         collectionView.register(BooksCollectionViewCell.self, forCellWithReuseIdentifier: "bookIdentifier")
-        collectionView.backgroundColor = .red
+        collectionView.backgroundColor = .white
         return collectionView
     }()
-    
     
     private func setupViews(){
         self.view.addSubview(collectionView)
         collectionView.dataSource = self
         collectionView.delegate = self
-        view.backgroundColor = .red
+        view.backgroundColor = .white
     }
     
     private func setupLayouts(){
@@ -49,6 +46,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupViews()
         setupLayouts()
+        startAnimating(type: .ballPulseSync)
+        parseTopics()
+    }
+    
+    private func parseTopics () {
+        Book.parseTopics { (books) in
+            self.books = books
+            self.collectionView.reloadData()
+            self.stopAnimating()
+        }
     }
 
 }
@@ -74,6 +81,7 @@ extension ViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc =  TopicsViewController()
+        vc.topic = books[indexPath.row].title!
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -8,13 +8,13 @@
 
 import UIKit
 import EasyPeasy
+import Parse
+import NVActivityIndicatorView
 
-class TopicsViewController: UIViewController {
+class TopicsViewController: UIViewController, NVActivityIndicatorViewable {
 
-    let books = [
-        Book(title: "Topic"), Book(title: "Topic"), Book(title: "Topic"), Book(title: "Topic"),
-        Book(title: "Topic"), Book(title: "Topic"), Book(title: "Topic"), Book(title: "Topic")
-    ]
+    var subtopics: [String] = []
+    var topic = ""
     
     lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -27,10 +27,23 @@ class TopicsViewController: UIViewController {
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
         collectionView.register(BooksCollectionViewCell.self, forCellWithReuseIdentifier: "topicIdentifier")
-        collectionView.backgroundColor = .red
+        collectionView.backgroundColor = .white
         return collectionView
     }()
     
+    lazy var activityIndicatorView: NVActivityIndicatorView = {
+        let frame = CGRect(x: self.view.center.x, y: self.view.center.y, width: 100, height: 100)
+        let activityIndicatorView = NVActivityIndicatorView(frame: frame, type: NVActivityIndicatorView.DEFAULT_TYPE, color: NVActivityIndicatorView.DEFAULT_COLOR, padding: NVActivityIndicatorView.DEFAULT_PADDING)
+        return activityIndicatorView
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupViews()
+        setupLayouts()
+        startAnimating(type: .ballPulseSync)
+        parseSubtopics()
+    }
     
     private func setupViews(){
         self.view.addSubview(collectionView)
@@ -45,10 +58,12 @@ class TopicsViewController: UIViewController {
         ]
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupViews()
-        setupLayouts()
+    private func parseSubtopics() {
+        Book.parseSubTopics(topic: topic) { (subtopics) in
+            self.subtopics = subtopics
+            self.collectionView.reloadData()
+            self.stopAnimating()
+        }
     }
     
 }
@@ -56,14 +71,14 @@ class TopicsViewController: UIViewController {
 extension TopicsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return books.count
+        return subtopics.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "topicIdentifier", for: indexPath) as! BooksCollectionViewCell
         
-        cell.titleLabel.text = books[indexPath.row].title
+        cell.titleLabel.text = subtopics[indexPath.row]
         cell.titleLabel.font = cell.titleLabel.font.withSize(30)
         
         return cell
@@ -75,6 +90,8 @@ extension TopicsViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc =  QuestionsViewController()
+        vc.topic = topic
+        vc.subtopic = subtopics[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
