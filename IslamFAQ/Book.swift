@@ -54,13 +54,12 @@ struct Book {
         }
     }
     
-    static func parseQuestions(topic: String, subtopic: String, completion: @escaping ([Question]) -> ()) {
+    static func parseQuestions(topic: String, completion: @escaping ([Question]) -> ()) {
         
         var questions: [Question] = []
         
         let query = PFQuery(className: "Question")
         query.whereKey("topic", equalTo: topic)
-        query.whereKey("subtopic", equalTo: subtopic)
         query.findObjectsInBackground { (result, error) in
             if let objects = result {
                 for object in objects {

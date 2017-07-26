@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		81583F508CDD90512A843358 /* Pods_IslamFAQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D225417580672D40EE132825 /* Pods_IslamFAQ.framework */; };
+		842680821F28691100600D6B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842680811F28691100600D6B /* MainView.swift */; };
+		842680841F286D1100600D6B /* Hints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842680831F286D1100600D6B /* Hints.swift */; };
+		842680861F28750C00600D6B /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842680851F28750C00600D6B /* QuestionTableViewCell.swift */; };
+		842680881F288B0600600D6B /* RisingSun-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 842680871F288B0600600D6B /* RisingSun-Regular.otf */; };
+		84682AD41F285EA00014480A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 84682AD31F285EA00014480A /* Podfile */; };
 		CCB8EF571F1BC3CE00550DB8 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8EF561F1BC3CE00550DB8 /* Book.swift */; };
 		CCB8EF591F1BCBA700550DB8 /* BooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8EF581F1BCBA700550DB8 /* BooksCollectionViewCell.swift */; };
 		CCB8EF5D1F1BCD9200550DB8 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8EF5C1F1BCD9200550DB8 /* TopicsViewController.swift */; };
 		CCB8EF5F1F1BDFF100550DB8 /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8EF5E1F1BDFF100550DB8 /* QuestionsViewController.swift */; };
 		CCB8EF611F1BE06D00550DB8 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8EF601F1BE06D00550DB8 /* Question.swift */; };
-		CCB8EF631F1BE15600550DB8 /* QuestionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8EF621F1BE15600550DB8 /* QuestionCollectionViewCell.swift */; };
 		CCB8EF651F1BE36A00550DB8 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB8EF641F1BE36A00550DB8 /* AnswerViewController.swift */; };
 		CCCD22CF1F1750B800E80F84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD22CE1F1750B800E80F84 /* AppDelegate.swift */; };
 		CCCD22D11F1750B800E80F84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCD22D01F1750B800E80F84 /* ViewController.swift */; };
@@ -44,13 +48,17 @@
 /* Begin PBXFileReference section */
 		38A3E4E1E8F44229AF719A43 /* Pods_IslamFAQTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IslamFAQTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7A4B5CE6AEE16A1CE9D626 /* Pods-IslamFAQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IslamFAQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IslamFAQ/Pods-IslamFAQ.debug.xcconfig"; sourceTree = "<group>"; };
+		842680811F28691100600D6B /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		842680831F286D1100600D6B /* Hints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hints.swift; sourceTree = "<group>"; };
+		842680851F28750C00600D6B /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		842680871F288B0600600D6B /* RisingSun-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RisingSun-Regular.otf"; sourceTree = "<group>"; };
+		84682AD31F285EA00014480A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A38BB6E7266B3A344874386 /* Pods-IslamFAQ.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IslamFAQ.release.xcconfig"; path = "Pods/Target Support Files/Pods-IslamFAQ/Pods-IslamFAQ.release.xcconfig"; sourceTree = "<group>"; };
 		CCB8EF561F1BC3CE00550DB8 /* Book.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		CCB8EF581F1BCBA700550DB8 /* BooksCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksCollectionViewCell.swift; sourceTree = "<group>"; };
 		CCB8EF5C1F1BCD9200550DB8 /* TopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
 		CCB8EF5E1F1BDFF100550DB8 /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		CCB8EF601F1BE06D00550DB8 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		CCB8EF621F1BE15600550DB8 /* QuestionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewCell.swift; sourceTree = "<group>"; };
 		CCB8EF641F1BE36A00550DB8 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		CCCD22CB1F1750B800E80F84 /* IslamFAQ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IslamFAQ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCD22CE1F1750B800E80F84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +125,7 @@
 			children = (
 				CCB8EF561F1BC3CE00550DB8 /* Book.swift */,
 				CCB8EF601F1BE06D00550DB8 /* Question.swift */,
+				842680831F286D1100600D6B /* Hints.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -125,7 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				CCB8EF581F1BCBA700550DB8 /* BooksCollectionViewCell.swift */,
-				CCB8EF621F1BE15600550DB8 /* QuestionCollectionViewCell.swift */,
+				842680811F28691100600D6B /* MainView.swift */,
+				842680851F28750C00600D6B /* QuestionTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -144,6 +154,7 @@
 		CCCD22C21F1750B800E80F84 = {
 			isa = PBXGroup;
 			children = (
+				84682AD31F285EA00014480A /* Podfile */,
 				CCCD22CD1F1750B800E80F84 /* IslamFAQ */,
 				CCCD22E51F1750B800E80F84 /* IslamFAQTests */,
 				CCCD22F01F1750B800E80F84 /* IslamFAQUITests */,
@@ -174,6 +185,7 @@
 				CCCD22DA1F1750B800E80F84 /* LaunchScreen.storyboard */,
 				CCCD22DD1F1750B800E80F84 /* Info.plist */,
 				CCCD22D51F1750B800E80F84 /* IslamFAQ.xcdatamodeld */,
+				842680871F288B0600600D6B /* RisingSun-Regular.otf */,
 			);
 			path = IslamFAQ;
 			sourceTree = "<group>";
@@ -309,6 +321,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84682AD41F285EA00014480A /* Podfile in Resources */,
+				842680881F288B0600600D6B /* RisingSun-Regular.otf in Resources */,
 				CCCD22DC1F1750B800E80F84 /* LaunchScreen.storyboard in Resources */,
 				CCCD22D91F1750B800E80F84 /* Assets.xcassets in Resources */,
 			);
@@ -361,7 +375,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E6B603F3656D8F59238F6AC8 /* [CP] Embed Pods Frameworks */ = {
@@ -396,14 +410,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCB8EF571F1BC3CE00550DB8 /* Book.swift in Sources */,
+				842680861F28750C00600D6B /* QuestionTableViewCell.swift in Sources */,
 				CCB8EF611F1BE06D00550DB8 /* Question.swift in Sources */,
 				CCB8EF651F1BE36A00550DB8 /* AnswerViewController.swift in Sources */,
 				CCB8EF5F1F1BDFF100550DB8 /* QuestionsViewController.swift in Sources */,
+				842680841F286D1100600D6B /* Hints.swift in Sources */,
 				CCCD22D71F1750B800E80F84 /* IslamFAQ.xcdatamodeld in Sources */,
-				CCB8EF631F1BE15600550DB8 /* QuestionCollectionViewCell.swift in Sources */,
 				CCB8EF5D1F1BCD9200550DB8 /* TopicsViewController.swift in Sources */,
 				CCCD22D11F1750B800E80F84 /* ViewController.swift in Sources */,
 				CCB8EF591F1BCBA700550DB8 /* BooksCollectionViewCell.swift in Sources */,
+				842680821F28691100600D6B /* MainView.swift in Sources */,
 				CCCD22CF1F1750B800E80F84 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,6 +567,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4M62H5V5V4;
 				INFOPLIST_FILE = IslamFAQ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nFactorial.IslamFAQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -565,6 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4M62H5V5V4;
 				INFOPLIST_FILE = IslamFAQ/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nFactorial.IslamFAQ;
 				PRODUCT_NAME = "$(TARGET_NAME)";

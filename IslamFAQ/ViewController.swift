@@ -9,82 +9,35 @@
 import UIKit
 import EasyPeasy
 import NVActivityIndicatorView
+import AnimatedCollectionViewLayout
 
 class ViewController: UIViewController, NVActivityIndicatorViewable {
     
-    var books: [Book] = []
-    
-    lazy var layout: UICollectionViewFlowLayout = {
-        let layout = UICollectionViewFlowLayout()
-        let size: CGFloat = self.view.frame.width
-        layout.minimumLineSpacing = 2
-        layout.itemSize = CGSize(width: size, height: size / 3)
-        return layout
+    let mainView : MainView = {
+        let mainView = MainView()
+        return mainView
     }()
-    
-    lazy var collectionView: UICollectionView = {
-        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
-        collectionView.register(BooksCollectionViewCell.self, forCellWithReuseIdentifier: "bookIdentifier")
-        collectionView.backgroundColor = .white
-        return collectionView
-    }()
-    
-    private func setupViews(){
-        self.view.addSubview(collectionView)
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        view.backgroundColor = .white
-    }
-    
-    private func setupLayouts(){
-        collectionView <- [
-            Edges(0)
-        ]
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViews()
-        setupLayouts()
-        startAnimating(type: .ballPulseSync)
-        parseTopics()
+        setup()
     }
     
-    private func parseTopics () {
-        Book.parseTopics { (books) in
-            self.books = books
-            self.collectionView.reloadData()
-            self.stopAnimating()
-        }
+    
+    private func setup() {
+        self.automaticallyAdjustsScrollViewInsets = false
+        view.addSubview(mainView)
+        updateViewConstraints()
+    }
+    
+    override func updateViewConstraints() {
+        super.updateViewConstraints()
+        
+        mainView <- [
+            Edges(0)
+        ]
     }
 
-}
-
-extension ViewController: UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return books.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "bookIdentifier", for: indexPath) as! BooksCollectionViewCell
-        
-        cell.titleLabel.text = books[indexPath.row].title
-        
-        return cell
-    }
-    
-}
-
-extension ViewController: UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc =  TopicsViewController()
-        vc.topic = books[indexPath.row].title!
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
 }
 
 

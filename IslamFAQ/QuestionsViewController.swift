@@ -26,7 +26,7 @@ class QuestionsViewController: UIViewController, NVActivityIndicatorViewable {
     
     lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
-        collectionView.register(QuestionCollectionViewCell.self, forCellWithReuseIdentifier: "questionID")
+        //collectionView.register(QuestionCollectionViewCell.self, forCellWithReuseIdentifier: "questionID")
         collectionView.backgroundColor = .red
         return collectionView
     }()
@@ -36,7 +36,6 @@ class QuestionsViewController: UIViewController, NVActivityIndicatorViewable {
         setupViews()
         setupLayouts()
         startAnimating(type: .ballPulseSync)
-        parseQuestions()
     }
     
     private func setupViews(){
@@ -52,14 +51,6 @@ class QuestionsViewController: UIViewController, NVActivityIndicatorViewable {
         ]
     }
     
-    private func parseQuestions() {
-        Book.parseQuestions(topic: topic, subtopic: subtopic) { (questions) in
-            self.questions = questions
-            self.collectionView.reloadData()
-            self.stopAnimating()
-        }
-    }
-    
 }
 
 extension QuestionsViewController: UICollectionViewDataSource {
@@ -70,9 +61,7 @@ extension QuestionsViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "questionID", for: indexPath) as! QuestionCollectionViewCell
-        
-        cell.questionLabel.text = questions[indexPath.row].questionTitle
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "questionID", for: indexPath) 
         
         return cell
     }

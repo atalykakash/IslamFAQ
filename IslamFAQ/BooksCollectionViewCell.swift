@@ -17,7 +17,7 @@ class BooksCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         
         self.contentView.addSubview(titleLabel)
-        self.contentView.backgroundColor = .white
+        self.contentView.backgroundColor = .red
         
         
         titleLabel.font = titleLabel.font.withSize(50)
