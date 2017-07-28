@@ -15,12 +15,19 @@ class MainView: UIView {
     var books: [Book] = []
     var questions: [Question] = []
     
+    lazy var picImageView : UIImageView = {
+        let picImageView = UIImageView()
+        picImageView.contentMode = .scaleAspectFill
+        picImageView.image = UIImage(named: "cami")
+        return picImageView
+    }()
+    
     lazy var layout: AnimatedCollectionViewLayout = {
         let layout = AnimatedCollectionViewLayout()
         let width: CGFloat = Constants.screenWidth
         let height: CGFloat = Constants.screenHeight
         layout.minimumLineSpacing = 2
-        layout.itemSize = CGSize(width: width, height: height*0.2)
+        layout.itemSize = CGSize(width: width, height: height*0.5)
         layout.scrollDirection = .horizontal
         layout.animator = LinearCardAttributesAnimator()
         return layout
@@ -30,7 +37,7 @@ class MainView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
         collectionView.register(BooksCollectionViewCell.self, forCellWithReuseIdentifier: "TopicCell")
         collectionView.isPagingEnabled = true
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = UIColor.white.withAlphaComponent(0.9)
         return collectionView
     }()
 
@@ -39,6 +46,7 @@ class MainView: UIView {
         tableView.register(QuestionTableViewCell.self, forCellReuseIdentifier: "QuestionCell")
         tableView.rowHeight = Constants.screenHeight*0.1
         tableView.backgroundColor = .green
+        tableView.dataSource = self
         return tableView
     }()
     
@@ -55,8 +63,8 @@ class MainView: UIView {
     
     private func setup() {
         
+        self.addSubview(picImageView)
         self.addSubview(tableView)
-        tableView.dataSource = self
         
         self.addSubview(collectionView)
         collectionView.dataSource = self
@@ -66,18 +74,25 @@ class MainView: UIView {
     override func updateConstraints() {
         super.updateConstraints()
         
+        picImageView <- [
+            Top(0),
+            Left(0),
+            Width(Constants.screenWidth),
+            Height(Constants.screenHeight*0.5)
+        ]
+        
         collectionView <- [
             Top(0),
             Left(0),
             Width(Constants.screenWidth),
-            Height(Constants.screenHeight*0.3)
+            Height(Constants.screenHeight*0.5)
         ]
         
         tableView <- [
             Top(0).to(collectionView),
             Left(0),
             Width(Constants.screenWidth),
-            Height(Constants.screenHeight*0.7)
+            Height(Constants.screenHeight*0.5)
         ]
     }
     
@@ -139,6 +154,7 @@ extension MainView: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopicCell", for: indexPath) as! BooksCollectionViewCell
         
         cell.titleLabel.text = books[indexPath.row].title
+        cell.layer.cornerRadius = 5
         
         return cell
     }
@@ -146,6 +162,6 @@ extension MainView: UICollectionViewDataSource {
 
 extension MainView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(Constants.screenHeight*0.08, 0, 0, 0)
+        return UIEdgeInsetsMake(frame.height*0.08, 0, 0, 0)
     }
 }
