@@ -12,7 +12,7 @@ import EasyPeasy
 class AnswerViewController: UIViewController {
     
     var question = Question(question: "", answer: "")
-    let questionLabel = UITextView()
+    let questionLabel = UILabel()
     let answerTextView = UITextView()
     
     func setupViews() {
@@ -24,9 +24,9 @@ class AnswerViewController: UIViewController {
         questionLabel.text = question.questionTitle
         questionLabel.backgroundColor = .white
         questionLabel.textAlignment = .left
+        questionLabel.numberOfLines = 0
         questionLabel.font = UIFont.boldSystemFont(ofSize: 23)
-        questionLabel.sizeToFit()
-        questionLabel.isEditable = false
+        questionLabel.adjustsFontSizeToFitWidth = true
         
         answerTextView.text = question.answerTitle
         answerTextView.textAlignment = .left
@@ -34,15 +34,20 @@ class AnswerViewController: UIViewController {
         answerTextView.isEditable = false
         answerTextView.font = answerTextView.font?.withSize(17)
         
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.hidesBarsOnSwipe = true
+        self.navigationItem.title = question.questionTitle
+        self.navigationController?.navigationBar.backItem?.title = ""
+        
     }
     
     func setupLayouts() {
         questionLabel <- [Size(CGSize(width: self.view.frame.width, height: self.view.frame.height / 7)),
-                          Top(100), Bottom(500), Right(20), Left(20)
+                          Top().to(self.topLayoutGuide), Bottom().to(answerTextView), Right(20), Left(20)
         ]
         
         answerTextView <- [Size(CGSize(width: self.view.frame.width, height: self.view.frame.height / 1.5)),
-                           Top(10).to(questionLabel), Bottom(10), Right(20), Left(15)
+                           Top().to(questionLabel), Bottom(10), Right(20), Left(15)
         ]
     }
     

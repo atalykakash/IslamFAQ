@@ -148,6 +148,7 @@ extension MainView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         didSelectDelegate?.selectedRow(question: questions[indexPath.row])
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
