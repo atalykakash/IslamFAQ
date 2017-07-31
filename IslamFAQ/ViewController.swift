@@ -26,6 +26,8 @@ class ViewController: UIViewController, NVActivityIndicatorViewable {
     
     private func setup() {
         self.automaticallyAdjustsScrollViewInsets = false
+        
+        mainView.didSelectDelegate = self
         view.addSubview(mainView)
         updateViewConstraints()
     }
@@ -37,7 +39,14 @@ class ViewController: UIViewController, NVActivityIndicatorViewable {
             Edges(0)
         ]
     }
+}
 
+extension ViewController: DidSelect {
+    func selectedRow(question: Question) {
+        let vc = AnswerViewController()
+        vc.question = question
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 

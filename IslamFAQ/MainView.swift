@@ -10,6 +10,10 @@ import UIKit
 import EasyPeasy
 import AnimatedCollectionViewLayout
 
+protocol DidSelect: class {
+    func selectedRow(question: Question)
+}
+
 class MainView: UIView {
     
     var books: [Book] = [Book(title: "Основы веры", image: "cami"),
@@ -62,6 +66,7 @@ class MainView: UIView {
     }()
     
     var animateActivityIndicator = false
+    weak var didSelectDelegate: DidSelect?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -142,7 +147,7 @@ extension MainView: UITableViewDataSource {
 extension MainView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        didSelectDelegate?.selectedRow(question: questions[indexPath.row])
     }
 }
 
