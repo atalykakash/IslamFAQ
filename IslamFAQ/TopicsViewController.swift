@@ -42,7 +42,6 @@ class TopicsViewController: UIViewController, NVActivityIndicatorViewable {
         setupViews()
         setupLayouts()
         startAnimating(type: .ballPulseSync)
-        parseSubtopics()
     }
     
     private func setupViews(){
@@ -58,13 +57,14 @@ class TopicsViewController: UIViewController, NVActivityIndicatorViewable {
         ]
     }
     
+    /*
     private func parseSubtopics() {
         Book.parseSubTopics(topic: topic) { (subtopics) in
             self.subtopics = subtopics
             self.collectionView.reloadData()
             self.stopAnimating()
         }
-    }
+    }*/
     
 }
 

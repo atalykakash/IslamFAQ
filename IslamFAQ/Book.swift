@@ -11,11 +11,14 @@ import Parse
 
 struct Book {
     let title: String?
+    let image: String?
     
-    init(title: String) {
+    init(title: String, image: String) {
         self.title = title
+        self.image = image
     }
     
+    /*
     static func parseTopics(completion: @escaping ([Book]) -> ()) {
         
         var books: [Book] = []
@@ -51,6 +54,25 @@ struct Book {
                     }
                 }
                 completion(subtopics)
+        }
+    }*/
+    
+    static func parseAllQuestions(completion: @escaping ([Question]) -> ()) {
+        
+        var questions: [Question] = []
+        
+        let query = PFQuery(className: "Question")
+        query.findObjectsInBackground { (result, error) in
+            if let objects = result {
+                for object in objects {
+                    guard let question = object["question"] as? String, let answer = object["answer"] as? String else {
+                        return
+                    }
+                    let q = Question(question: question, answer: answer)
+                    questions.append(q)
+                }
+            }
+            completion(questions)
         }
     }
     

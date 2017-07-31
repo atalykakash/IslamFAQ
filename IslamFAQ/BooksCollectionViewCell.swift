@@ -13,7 +13,7 @@ class BooksCollectionViewCell: UICollectionViewCell {
     
     lazy var titleLabel : UILabel = {
        let label = UILabel()
-       label.font = UIFont.risingSunRegular().withSize(40)
+       label.font = UIFont.aliceRegular().withSize(40)
        label.textAlignment = .center
        return label
     }()
@@ -26,13 +26,22 @@ class BooksCollectionViewCell: UICollectionViewCell {
        return picImageView
     }()
     
+    lazy var activityIndicatorView: UIActivityIndicatorView = {
+        let view = UIActivityIndicatorView()
+        view.transform = CGAffineTransform(scaleX: 3, y: 3)
+        return view
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         contentView.clipsToBounds = true
-        
+    
         self.addSubview(picImageView)
         self.addSubview(titleLabel)
+        self.addSubview(activityIndicatorView)
+        
+        activityIndicatorView <- Edges(0)
         
         picImageView <- [
             Top(0),

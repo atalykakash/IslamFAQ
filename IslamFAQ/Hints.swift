@@ -20,4 +20,8 @@ extension UIFont {
     static func risingSunRegular() -> UIFont {
         return UIFont(name: "RisingSun-Regular", size: Constants.screenWidth*0.04)!
     }
+    
+    static func aliceRegular() -> UIFont {
+        return UIFont(name: "Alice-Regular", size: Constants.screenWidth*0.04)!
+    }
 }

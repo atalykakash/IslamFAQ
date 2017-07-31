@@ -12,7 +12,13 @@ import AnimatedCollectionViewLayout
 
 class MainView: UIView {
     
-    var books: [Book] = []
+    var books: [Book] = [Book(title: "Основы веры", image: "cami"),
+                         Book(title: "Ислам", image: "cami"),
+                         Book(title: "Метафизика", image: "cami"),
+                         Book(title: "Человек", image: "man"),
+                         Book(title: "Сотворение", image: "flower"),
+                         Book(title: "Право (фикх)", image: "cami"),
+                         Book(title: "Разное", image: "cami"),]
     var questions: [Question] = []
     
     lazy var picImageView : UIImageView = {
@@ -37,7 +43,10 @@ class MainView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
         collectionView.register(BooksCollectionViewCell.self, forCellWithReuseIdentifier: "TopicCell")
         collectionView.isPagingEnabled = true
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = UIColor.white.withAlphaComponent(0.9)
+        collectionView.dataSource = self
+        collectionView.delegate = self
         return collectionView
     }()
 
@@ -45,16 +54,19 @@ class MainView: UIView {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.register(QuestionTableViewCell.self, forCellReuseIdentifier: "QuestionCell")
         tableView.rowHeight = Constants.screenHeight*0.1
-        tableView.backgroundColor = .green
+        tableView.backgroundColor = .white
         tableView.dataSource = self
+        tableView.delegate = self
+        tableView.sectionHeaderHeight = Constants.screenHeight*0.5
         return tableView
     }()
+    
+    var animateActivityIndicator = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
         updateConstraints()
-        parseTopics()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -64,11 +76,10 @@ class MainView: UIView {
     private func setup() {
         
         self.addSubview(picImageView)
+        self.addSubview(collectionView)
         self.addSubview(tableView)
         
-        self.addSubview(collectionView)
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        parseAllQuestions()
     }
     
     override func updateConstraints() {
@@ -96,18 +107,18 @@ class MainView: UIView {
         ]
     }
     
-    private func parseTopics() {
-        Book.parseTopics { (books) in
-            self.books = books
-            self.collectionView.reloadData()
-            //self.stopAnimating()
+    private func parseAllQuestions() {
+        Book.parseAllQuestions { (questions) in
+            self.questions = questions
+            self.tableView.reloadData()
         }
     }
     
-    func parseQuestions(topic: String) {
+    func parseQuestions(topic: String, completion: @escaping () -> ()) {
         Book.parseQuestions(topic: topic) { (questions) in
             self.questions = questions
             self.tableView.reloadData()
+            completion()
         }
     }
 
@@ -138,9 +149,24 @@ extension MainView: UITableViewDelegate {
 extension MainView: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! BooksCollectionViewCell
+        cell.activityIndicatorView.startAnimating()
         if let title = books[indexPath.row].title {
-            parseQuestions(topic: title)
+            parseQuestions(topic: title, completion: { 
+                cell.activityIndicatorView.stopAnimating()
+            })
         }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        var visibleRect = CGRect()
+        visibleRect.origin = collectionView.contentOffset
+        visibleRect.size = collectionView.bounds.size
+        
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        let visibleIndex = collectionView.indexPathForItem(at: visiblePoint)
+        
+        picImageView.image = UIImage(named: books[(visibleIndex?.row)!].image!)
     }
 }
 
@@ -154,7 +180,9 @@ extension MainView: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopicCell", for: indexPath) as! BooksCollectionViewCell
         
         cell.titleLabel.text = books[indexPath.row].title
+        cell.picImageView.image = UIImage(named: books[indexPath.row].image!)
         cell.layer.cornerRadius = 5
+        cell.activityIndicatorView.stopAnimating()
         
         return cell
     }
@@ -165,3 +193,5 @@ extension MainView: UICollectionViewDelegateFlowLayout {
         return UIEdgeInsetsMake(frame.height*0.08, 0, 0, 0)
     }
 }
+
+
