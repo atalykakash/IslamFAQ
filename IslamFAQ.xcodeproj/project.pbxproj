@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		81583F508CDD90512A843358 /* Pods_IslamFAQ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D225417580672D40EE132825 /* Pods_IslamFAQ.framework */; };
 		840389A81F2B4A4E00195442 /* Alice-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 840389A71F2B4A4E00195442 /* Alice-Regular.ttf */; };
+		841587E41F3476DF00E4F5E7 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841587E31F3476DF00E4F5E7 /* AnswerView.swift */; };
 		842680821F28691100600D6B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842680811F28691100600D6B /* MainView.swift */; };
 		842680841F286D1100600D6B /* Hints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842680831F286D1100600D6B /* Hints.swift */; };
 		842680861F28750C00600D6B /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842680851F28750C00600D6B /* QuestionTableViewCell.swift */; };
@@ -48,6 +49,7 @@
 		38A3E4E1E8F44229AF719A43 /* Pods_IslamFAQTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IslamFAQTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E7A4B5CE6AEE16A1CE9D626 /* Pods-IslamFAQ.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IslamFAQ.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IslamFAQ/Pods-IslamFAQ.debug.xcconfig"; sourceTree = "<group>"; };
 		840389A71F2B4A4E00195442 /* Alice-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alice-Regular.ttf"; sourceTree = "<group>"; };
+		841587E31F3476DF00E4F5E7 /* AnswerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 		842680811F28691100600D6B /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		842680831F286D1100600D6B /* Hints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hints.swift; sourceTree = "<group>"; };
 		842680851F28750C00600D6B /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				CCB8EF581F1BCBA700550DB8 /* BooksCollectionViewCell.swift */,
 				842680811F28691100600D6B /* MainView.swift */,
 				842680851F28750C00600D6B /* QuestionTableViewCell.swift */,
+				841587E31F3476DF00E4F5E7 /* AnswerView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				842680841F286D1100600D6B /* Hints.swift in Sources */,
 				CCCD22D71F1750B800E80F84 /* IslamFAQ.xcdatamodeld in Sources */,
 				CCCD22D11F1750B800E80F84 /* ViewController.swift in Sources */,
+				841587E41F3476DF00E4F5E7 /* AnswerView.swift in Sources */,
 				CCB8EF591F1BCBA700550DB8 /* BooksCollectionViewCell.swift in Sources */,
 				842680821F28691100600D6B /* MainView.swift in Sources */,
 				CCCD22CF1F1750B800E80F84 /* AppDelegate.swift in Sources */,
