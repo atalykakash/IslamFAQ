@@ -13,16 +13,17 @@ import AnimatedCollectionViewLayout
 
 class ViewController: UIViewController, NVActivityIndicatorViewable {
     
-    let mainView : MainView = {
+    lazy var mainView : MainView = {
         let mainView = MainView()
         return mainView
     }()
+    
+    var searchController: UISearchController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }
-    
     
     private func setup() {
         self.automaticallyAdjustsScrollViewInsets = false
@@ -30,6 +31,17 @@ class ViewController: UIViewController, NVActivityIndicatorViewable {
         mainView.didSelectDelegate = self
         view.addSubview(mainView)
         updateViewConstraints()
+        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = nil
+        searchController.delegate = self
+        searchController.searchBar.delegate = self
+        
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.dimsBackgroundDuringPresentation = true
+        
+        navigationItem.titleView = searchController.searchBar
+        definesPresentationContext = true
     }
     
     override func updateViewConstraints() {
@@ -49,4 +61,16 @@ extension ViewController: DidSelect {
     }
 }
 
+extension ViewController: UISearchControllerDelegate, UISearchResultsUpdating, UISearchBarDelegate {
+    
+    func updateSearchResults(for searchController: UISearchController) {
 
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        Book.parseSearchQuestions(text: searchText, completion: { (questions) in
+            self.mainView.questions = questions
+            self.mainView.tableView.reloadData()
+        })
+    }
+}

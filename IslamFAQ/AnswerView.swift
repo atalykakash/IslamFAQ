@@ -38,6 +38,7 @@ class AnswerView: UIView {
         textView.isScrollEnabled = false
         textView.isEditable = false
         textView.font = UIFont.boldSystemFont(ofSize: 23)
+        textView.backgroundColor = .red
         return textView
     }()
     
@@ -71,7 +72,7 @@ class AnswerView: UIView {
         scrollView <- Edges()
         
         questionTextView <- [
-            Top(100),
+            Top(0),
             Left(0),
             Width(Constants.screenWidth),
             Height(questionTextView.frame.height)
@@ -81,16 +82,17 @@ class AnswerView: UIView {
         
         answerTextView <- [
             Top(0).to(questionTextView),
-            Left(0),
-            Width(Constants.screenWidth),
+            CenterX().to(self),
+            Width(Constants.screenWidth*0.8),
             Height(answerTextView.frame.height)
         ]
         
         answerTextView.layoutIfNeeded()
+        
+        scrollView.contentSize = CGSize(width: Constants.screenWidth*0.9, height: answerTextView.frame.maxY+100)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
